@@ -6,9 +6,11 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
-  base: './', // Ajustado para funcionar tanto localmente quanto no GitHub Pages
-  server: {
-    host: true,
-    port: 5173,
+  base: '/automus/', // Ajustado para o GitHub Pages
+  build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
+    sourcemap: false,
+    minify: true,
   },
 });
